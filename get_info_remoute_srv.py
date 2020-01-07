@@ -10,7 +10,7 @@
 
 import subprocess
 
-HOSTS = ('proxy1', 'proxy')
+HOSTS = ('127.0.0.1', '')
 
 COMMANDS = ('uname -a', 'uptime')
 

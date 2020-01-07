@@ -46,11 +46,11 @@ if try_count == 0:
 file_info = {
     'fname': file_name,
     'fsize': file_stats[stat.ST_SIZE],
-    'f_lm' : time.strftime("%d/%m/%Y %I:%M:%S %p",
+    'f_lm' : time.strftime("%Y-%m-%d %H:%M:%S",
                            time.localtime(file_stats[stat.ST_MTIME])),
-    'f_la' : time.strftime("%d/%m/%Y %I:%M:%S %p",
+    'f_la' : time.strftime("%Y-%m-%d %H:%M:%S",
                            time.localtime(file_stats[stat.ST_ATIME])),
-    'f_ct' : time.strftime("%d/%m/%Y %I:%M:%S %p",
+    'f_ct' : time.strftime("%Y-%m-%d %H:%M:%S",
                            time.localtime(file_stats[stat.ST_CTIME])),
     'no_of_lines':count,
     't_char':t_char

@@ -1,6 +1,6 @@
 from __future__ import print_function
-import urllib2
-import cookielib
+import urllib.request
+from http import cookiejar as cookielib
 from getpass import getpass
 import sys
 
@@ -23,7 +23,7 @@ data = 'username={0}&password={1}&Submit=Sign+in'.format(username, passwd)
 
 # For Cookies:
 cj = cookielib.CookieJar()
-opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
 
 # Adding Header detail:
 opener.addheaders = [('User-Agent',
